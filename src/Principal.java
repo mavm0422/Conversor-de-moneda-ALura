@@ -8,6 +8,7 @@ public class Principal {
         ConversorMoneda conversor = new ConversorMoneda(apiService);
         boolean continuar = true;
 
+
         while (continuar) {
             System.out.println("Seleccione una opción:");
             System.out.println("1) Dolar => Peso argentino");
@@ -17,6 +18,7 @@ public class Principal {
             System.out.println("5) Dolar => Peso colombiano");
             System.out.println("6) Peso Colombiano => Dolar");
             System.out.println("7) Salir");
+            System.out.println("********************");
 
             int opcion = scanner.nextInt();
 
@@ -24,35 +26,36 @@ public class Principal {
                 case 1:
                     System.out.println("Ingrese la cantidad en dólares:");
                     double dolares = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirDolarAPesoArgentino(dolares));
+                    System.out.println("Resultado: " + conversor.convertirDolarAPesoArgentino(dolares)+ " ARS");
                     break;
                 case 2:
                     System.out.println("Ingrese la cantidad en pesos argentinos:");
                     double pesosArg = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirPesoArgentinoADolar(pesosArg));
+                    System.out.println("Resultado: " + conversor.convertirPesoArgentinoADolar(pesosArg) + " USD");
                     break;
                 case 3:
                     System.out.println("Ingrese la cantidad en dólares:");
                     double dolaresToReal = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirDolarAReal(dolaresToReal));
+                    System.out.println("Resultado: " + conversor.convertirDolarAReal(dolaresToReal)+ " BRL");
                     break;
                 case 4:
                     System.out.println("Ingrese la cantidad en reales:");
                     double reales = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirRealADolar(reales));
+                    System.out.println("Resultado: " + conversor.convertirRealADolar(reales) + " USD");
                     break;
                 case 5:
                     System.out.println("Ingrese la cantidad en dólares:");
                     double dolaresToPesoCol = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirDolarAPesoColombiano(dolaresToPesoCol));
+                    System.out.println("Resultado: " + conversor.convertirDolarAPesoColombiano(dolaresToPesoCol)+ " COP");
                     break;
                 case 6:
                     System.out.println("Ingrese la cantidad en pesos colombianos:");
                     double pesosCol = scanner.nextDouble();
-                    System.out.println("Resultado: " + conversor.convertirPesoColombianoADolar(pesosCol));
+                    System.out.println("Resultado: " + conversor.convertirPesoColombianoADolar(pesosCol)+ " USD");
                     break;
                 case 7:
                     continuar = false;
+                    System.out.println("Gracias por usar nuestra aplicacion");
                     break;
                 default:
                     System.out.println("Opción no válida.");
